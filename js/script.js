@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initScrollEffects();
     initContactForm();
     initAnimations();
+    initDownloadTracking();
 });
 
 // Navigation functionality
@@ -427,9 +428,74 @@ window.addEventListener('error', function(e) {
     console.warn('Sevika HMS Website: Non-critical error occurred:', e.message);
 });
 
+// Download tracking functionality
+function initDownloadTracking() {
+    const apkDownloadBtn = document.querySelector('.apk-download');
+    
+    if (apkDownloadBtn) {
+        apkDownloadBtn.addEventListener('click', function(e) {
+            // Track download event
+            trackDownload('APK', 'v1.0.8');
+            
+            // Show download notification
+            showNotification('APK download started! Check your downloads folder.', 'success');
+            
+            // Optional: Show installation instructions after a delay
+            setTimeout(() => {
+                showInstallationInstructions();
+            }, 3000);
+        });
+    }
+}
+
+// Track download events (can be extended with analytics)
+function trackDownload(type, version) {
+    console.log(`Download tracked: ${type} ${version}`);
+    
+    // You can integrate with Google Analytics or other tracking services here
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'download', {
+            'event_category': 'APK',
+            'event_label': version,
+            'value': 1
+        });
+    }
+    
+    // Store download count in localStorage for basic tracking
+    const downloads = JSON.parse(localStorage.getItem('sevika_downloads') || '{}');
+    const key = `${type}_${version}`;
+    downloads[key] = (downloads[key] || 0) + 1;
+    downloads.total = (downloads.total || 0) + 1;
+    localStorage.setItem('sevika_downloads', JSON.stringify(downloads));
+}
+
+// Show installation instructions
+function showInstallationInstructions() {
+    const instructions = `
+        <div style="text-align: left; line-height: 1.6;">
+            <strong>📱 Installation Instructions:</strong><br><br>
+            1. Open your device's <strong>Settings</strong><br>
+            2. Go to <strong>Security</strong> or <strong>Privacy</strong><br>
+            3. Enable <strong>"Install from Unknown Sources"</strong><br>
+            4. Open the downloaded APK file<br>
+            5. Tap <strong>"Install"</strong> and follow the prompts<br><br>
+            <em>Need help? Contact us at support@sevika.online</em>
+        </div>
+    `;
+    
+    showNotification(instructions, 'info');
+}
+
+// Get download statistics (for potential admin dashboard)
+function getDownloadStats() {
+    return JSON.parse(localStorage.getItem('sevika_downloads') || '{}');
+}
+
 // Export functions for potential external use
 window.SevikaHMS = {
     showNotification,
     validateForm,
-    isValidEmail
+    isValidEmail,
+    trackDownload,
+    getDownloadStats
 };

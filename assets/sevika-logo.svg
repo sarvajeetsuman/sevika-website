@@ -1,0 +1,31 @@
+
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="backgroundGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e40af" stop-opacity="1" />
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="1" />
+    </linearGradient>
+    <linearGradient id="crossGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="1" />
+      <stop offset="100%" stop-color="#f1f5f9" stop-opacity="1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Rounded background -->
+  <rect width="512" height="512" rx="80" fill="url(#backgroundGradient)" />
+  
+  <!-- Medical cross - centered and slightly larger -->
+  <g transform="translate(256, 256)">
+    <rect x="-100" y="-30" width="200" height="60" rx="20" fill="url(#crossGradient)" />
+    <rect x="-30" y="-100" width="60" height="200" rx="20" fill="url(#crossGradient)" />
+  </g>
+  
+  <!-- Healthcare symbol - heart - repositioned slightly lower -->
+  <g transform="translate(256, 200)">
+    <path d="M0,20 C0,10 10,0 20,0 C30,0 40,10 40,20 C40,40 20,60 0,80 C-20,60 -40,40 -40,20 C-40,10 -30,0 -20,0 C-10,0 0,10 0,20 Z" 
+          fill="#ef4444" opacity="0.8" />
+  </g>
+  
+  <!-- Subtle shine effect -->
+  <ellipse cx="180" cy="150" rx="80" ry="40" fill="white" opacity="0.2" transform="rotate(-45 180 150)" />
+</svg>

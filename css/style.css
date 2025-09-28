@@ -1,17 +1,21 @@
 /* Sevika HMS Website Styles */
 
-/* CSS Variables */
+/* CSS Variables - Clean Healthcare Theme */
 :root {
-    --primary-color: #2563eb;
+    --primary-color: #3b82f6;
     --primary-dark: #1d4ed8;
+    --primary-light: #60a5fa;
     --secondary-color: #10b981;
     --accent-color: #f59e0b;
+    --success-color: #22c55e;
+    --warning-color: #f59e0b;
     --text-primary: #1f2937;
     --text-secondary: #6b7280;
     --text-light: #9ca3af;
     --bg-primary: #ffffff;
-    --bg-secondary: #f9fafb;
-    --bg-dark: #111827;
+    --bg-secondary: #f8fafc;
+    --bg-accent: #f1f5f9;
+    --bg-dark: #1f2937;
     --border-color: #e5e7eb;
     --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
     --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
@@ -147,6 +151,12 @@ p {
     color: var(--primary-color);
 }
 
+.nav-logo-img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
 .nav-logo i {
     font-size: 2rem;
 }
@@ -201,7 +211,7 @@ p {
 /* Hero Section */
 .hero {
     padding: 8rem 0 4rem;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
     color: white;
     overflow: hidden;
 }
@@ -221,12 +231,14 @@ p {
     font-weight: 700;
     line-height: 1.1;
     margin-bottom: 1.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .hero-description {
     font-size: 1.25rem;
     margin-bottom: 2rem;
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(255, 255, 255, 0.95);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .hero-buttons {
@@ -270,6 +282,16 @@ p {
     text-align: center;
     transform: translateY(20px);
     animation: float 6s ease-in-out infinite;
+    color: white;
+}
+
+.hero-card h3 {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.hero-card p {
+    color: rgba(255, 255, 255, 0.9);
 }
 
 .hero-icon {
@@ -407,7 +429,7 @@ p {
 }
 
 .about-card {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
     color: white;
     border-radius: 1rem;
     padding: 2rem;
@@ -416,6 +438,12 @@ p {
 
 .about-card h3 {
     margin-bottom: 1rem;
+    color: white;
+}
+
+.about-card p {
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: 1.5rem;
 }
 
 .mission-stats {
@@ -444,41 +472,59 @@ p {
 /* Download Section */
 .download {
     padding: 4rem 0;
-    background-color: var(--bg-secondary);
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    color: white;
     text-align: center;
 }
 
 .download-content h2 {
     margin-bottom: 1rem;
+    color: white;
 }
 
 .download-content p {
     font-size: 1.125rem;
     margin-bottom: 2rem;
+    color: rgba(255, 255, 255, 0.9);
 }
 
 .download-buttons {
     display: flex;
     justify-content: center;
     gap: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
 }
 
 .download-btn {
     display: flex;
     align-items: center;
     gap: 1rem;
-    background-color: var(--text-primary);
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
     color: white;
     padding: 1rem 1.5rem;
     border-radius: var(--border-radius);
     text-decoration: none;
     transition: var(--transition);
+    backdrop-filter: blur(10px);
+    min-width: 180px;
 }
 
 .download-btn:hover {
-    background-color: var(--primary-color);
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
     transform: translateY(-2px);
+}
+
+.download-btn.apk-download {
+    background: rgba(5, 150, 105, 0.2);
+    border-color: rgba(5, 150, 105, 0.4);
+}
+
+.download-btn.apk-download:hover {
+    background: rgba(5, 150, 105, 0.3);
+    border-color: rgba(5, 150, 105, 0.6);
 }
 
 .download-btn i {
@@ -498,13 +544,57 @@ p {
     font-size: 1.125rem;
 }
 
+.download-info {
+    margin-bottom: 2rem;
+}
+
+.apk-info {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    margin: 0 auto;
+    max-width: 600px;
+    backdrop-filter: blur(10px);
+}
+
+.apk-info h4 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.apk-info h4 i {
+    margin-right: 0.5rem;
+    color: var(--secondary-color);
+}
+
+.apk-info p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: white;
+}
+
+.security-note {
+    background: rgba(245, 158, 11, 0.15);
+    border: 1px solid rgba(245, 158, 11, 0.3);
+    border-radius: 0.375rem;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.security-note i {
+    color: var(--warning-color);
+    margin-right: 0.5rem;
+}
+
 .download-note {
-    color: var(--text-secondary);
+    color: rgba(255, 255, 255, 0.8);
     font-size: 0.875rem;
+    margin-top: 2rem;
 }
 
 .download-note i {
-    color: var(--accent-color);
+    color: var(--warning-color);
     margin-right: 0.5rem;
 }
 
@@ -599,9 +689,15 @@ p {
     margin-bottom: 1rem;
 }
 
+.footer-logo-img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
 .footer-logo i {
     font-size: 2rem;
-    color: var(--primary-color);
+    color: var(--primary-light);
 }
 
 .footer-section p {
@@ -732,6 +828,19 @@ p {
     .download-buttons {
         flex-direction: column;
         align-items: center;
+    }
+    
+    .apk-info {
+        padding: 1.5rem;
+        margin: 0 1rem;
+    }
+    
+    .apk-info h4 {
+        font-size: 1.1rem;
+    }
+    
+    .apk-info p {
+        font-size: 0.9rem;
     }
     
     .footer-content {
