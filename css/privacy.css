@@ -422,6 +422,56 @@
     color: #f59e0b;
 }
 
+/* Financial Viability Section */
+.financial-viability {
+    background-color: #f0f9ff;
+    border: 1px solid #0ea5e9;
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+.financial-viability h3 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    color: #0c4a6e;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.financial-viability h3 i {
+    color: #0ea5e9;
+}
+
+.financial-viability ul {
+    margin-bottom: 1rem;
+}
+
+.financial-viability ul li {
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
+}
+
+.financial-viability ul li strong {
+    color: var(--text-primary);
+}
+
+.viability-note {
+    background-color: rgba(14, 165, 233, 0.1);
+    border-left: 4px solid #0ea5e9;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 0 0.375rem 0.375rem 0;
+    font-size: 0.9rem;
+}
+
+.viability-note i {
+    color: #0ea5e9;
+    margin-right: 0.5rem;
+}
+
 /* Contact Information */
 .contact-info {
     display: flex;
