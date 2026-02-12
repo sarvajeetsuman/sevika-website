@@ -2,7 +2,7 @@
 
 /* Hero Section */
 .download-hero {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
     padding: 120px 0 80px;
     color: white;
     text-align: center;
@@ -73,26 +73,26 @@
 }
 
 .download-card.recommended {
-    border-color: #667eea;
+    border-color: #3b82f6;
 }
 
 .card-badge {
     position: absolute;
     top: -12px;
     right: 30px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
     color: white;
     padding: 0.5rem 1.5rem;
     border-radius: 20px;
     font-size: 0.85rem;
     font-weight: 600;
-    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
 }
 
 .card-icon {
     width: 80px;
     height: 80px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
     border-radius: 20px;
     display: flex;
     align-items: center;
@@ -161,13 +161,13 @@
 }
 
 .download-btn.primary {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
     color: white;
-    box-shadow: 0 4px 20px rgba(102, 126, 234, 0.4);
+    box-shadow: 0 4px 20px rgba(59, 130, 246, 0.4);
 }
 
 .download-btn.primary:hover {
-    box-shadow: 0 6px 30px rgba(102, 126, 234, 0.5);
+    box-shadow: 0 6px 30px rgba(59, 130, 246, 0.5);
     transform: translateY(-2px);
 }
 
@@ -218,7 +218,7 @@
 .req-icon {
     width: 60px;
     height: 60px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -268,12 +268,12 @@
 }
 
 .tab-btn:hover {
-    border-color: #667eea;
-    color: #667eea;
+    border-color: #3b82f6;
+    color: #3b82f6;
 }
 
 .tab-btn.active {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
     color: white;
     border-color: transparent;
 }
@@ -302,7 +302,7 @@
 .step-number {
     width: 50px;
     height: 50px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -343,8 +343,8 @@
 }
 
 .release-item.latest {
-    border: 2px solid #667eea;
-    background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+    border: 2px solid #3b82f6;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(29, 78, 216, 0.05) 100%);
 }
 
 .release-header {
@@ -369,7 +369,7 @@
 }
 
 .release-badge {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
     color: white;
     padding: 0.25rem 1rem;
     border-radius: 20px;
@@ -424,8 +424,8 @@
 }
 
 .release-link:hover {
-    border-color: #667eea;
-    color: #667eea;
+    border-color: #3b82f6;
+    color: #3b82f6;
     transform: translateY(-2px);
 }
 
@@ -452,7 +452,7 @@
 }
 
 .support-card:hover {
-    border-color: #667eea;
+    border-color: #3b82f6;
     transform: translateY(-5px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
@@ -460,7 +460,7 @@
 .support-icon {
     width: 70px;
     height: 70px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -490,7 +490,7 @@
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    color: #667eea;
+    color: #3b82f6;
     font-weight: 600;
     text-decoration: none;
     transition: all 0.3s ease;
