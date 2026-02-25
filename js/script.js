@@ -155,19 +155,28 @@ function initContactForm() {
         const originalText = submitBtn.innerHTML;
         submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
         submitBtn.disabled = true;
-        
-        // Simulate form submission (replace with actual API call)
-        setTimeout(() => {
-            // Show success message
-            showNotification('Message sent successfully! We\'ll get back to you soon.', 'success');
-            
-            // Reset form
-            contactForm.reset();
-            
-            // Reset button
+
+        fetch('https://app.sevika.online/api/contact', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+        })
+        .then(res => res.json())
+        .then(json => {
+            if (json.error) {
+                showNotification(json.error, 'error');
+            } else {
+                showNotification('Message sent successfully! We\'ll get back to you soon.', 'success');
+                contactForm.reset();
+            }
+        })
+        .catch(() => {
+            showNotification('Failed to send message. Please try again later.', 'error');
+        })
+        .finally(() => {
             submitBtn.innerHTML = originalText;
             submitBtn.disabled = false;
-        }, 2000);
+        });
     });
 }
 
