@@ -508,7 +508,10 @@ p {
     text-decoration: none;
     transition: var(--transition);
     backdrop-filter: blur(10px);
-    min-width: 180px;
+    min-width: 240px;
+    flex: 1;
+    max-width: 280px;
+    justify-content: center;
 }
 
 .download-btn:hover {
