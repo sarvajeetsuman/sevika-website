@@ -754,6 +754,142 @@ p {
     color: var(--primary-color);
 }
 
+/* MSME / Udyam Registration Certificate Badge */
+.msme-badge {
+    margin-top: 1.75rem;
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.18);
+    border: 1px solid #e2e8f0;
+    color: #1e293b;
+}
+
+.msme-badge-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 1.1rem;
+    background: linear-gradient(90deg, #ff9900 0%, #ff6b00 100%);
+    gap: 0.5rem;
+}
+
+.msme-badge-gov {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.msme-ashoka {
+    width: 28px;
+    height: 28px;
+    filter: brightness(0) invert(1);
+    flex-shrink: 0;
+}
+
+.msme-badge-gov-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.msme-gov-title {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 0.03em;
+}
+
+.msme-gov-sub {
+    font-size: 0.6rem;
+    color: rgba(255,255,255,0.88);
+    font-weight: 400;
+}
+
+.msme-badge-stamp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.1rem;
+    flex-shrink: 0;
+}
+
+.msme-badge-stamp i {
+    font-size: 1.4rem;
+    color: #ffffff;
+}
+
+.msme-badge-stamp span {
+    font-size: 0.55rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: rgba(255,255,255,0.9);
+}
+
+.msme-badge-divider {
+    height: 4px;
+    background: linear-gradient(90deg, #ff9900 33%, #ffffff 33%, #ffffff 66%, #138808 66%);
+}
+
+.msme-badge-title {
+    text-align: center;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #64748b;
+    padding: 0.65rem 1.1rem 0;
+}
+
+.msme-badge-reg-number {
+    text-align: center;
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #1e293b;
+    letter-spacing: 0.06em;
+    padding: 0.2rem 1.1rem 0.75rem;
+    font-family: 'Courier New', monospace;
+}
+
+.msme-badge-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    border-top: 1px solid #e2e8f0;
+}
+
+.msme-detail {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem 0.9rem;
+    border-right: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.msme-detail:nth-child(even) {
+    border-right: none;
+}
+
+.msme-detail-label {
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: #94a3b8;
+    font-weight: 600;
+    margin-bottom: 0.15rem;
+}
+
+.msme-detail-value {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.msme-type-micro {
+    color: #138808;
+}
+
 .footer-bottom {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding-top: 2rem;
@@ -761,7 +897,18 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
     color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-udyam {
+    font-size: 0.82rem;
+    color: rgba(255, 200, 80, 0.85);
+}
+
+.footer-udyam i {
+    color: #ffb800;
 }
 
 .footer-bottom i {
