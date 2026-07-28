@@ -60,10 +60,10 @@ https://yourusername.github.io/sevika-website/privacy.html
 5. Privacy Policy URL: `https://amazing-site-name.netlify.app/privacy.html`
 
 ## Custom Domain (Optional)
-If you own `sevika.online`:
-1. Add CNAME record: `www` → `yourusername.github.io`
-2. In GitHub Pages settings, add custom domain: `sevika.online`
-3. Privacy Policy URL becomes: `https://sevika.online/privacy.html`
+If you own `sevikahms.com`:
+1. Add an apex A record (or ALIAS/ANAME) pointing to GitHub Pages' IPs, and a CNAME record: `www` → `yourusername.github.io`
+2. In GitHub Pages settings, add custom domain: `sevikahms.com`
+3. Privacy Policy URL becomes: `https://sevikahms.com/privacy.html`
 
 ## ✅ Verification Checklist
 - [ ] Website loads correctly

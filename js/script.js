@@ -156,7 +156,7 @@ function initContactForm() {
         submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
         submitBtn.disabled = true;
 
-        fetch('https://app.sevika.online/api/contact', {
+        fetch('https://app.sevikahms.com/api/contact', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)
@@ -488,7 +488,7 @@ function showInstallationInstructions() {
             3. Enable <strong>"Install from Unknown Sources"</strong><br>
             4. Open the downloaded APK file<br>
             5. Tap <strong>"Install"</strong> and follow the prompts<br><br>
-            <em>Need help? Contact us at support@sevika.online</em>
+            <em>Need help? Contact us at support@sevikaonline.com</em>
         </div>
     `;
     
